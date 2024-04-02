@@ -2,6 +2,13 @@ library(soilDB)
 library(terra)
 library(aqp)
 
+## TODO:
+# * hydraulic properties via ROSETTA
+# * surface properties related to runoff
+# * aggregation / subset to specific depth-interval
+# * possible re-sampling to common grid spacing
+# 
+
 
 #' @param s character, site name and path
 getSoilData <- function(s) {
@@ -26,8 +33,9 @@ getSoilData <- function(s) {
   mu.grid <- mukey.wcs(e, db = 'gssurgo')
   
   # warp mukey grid to source PCS
+  # inherits grid parameters from elevation grid
   # these are map unit keys = NN resampling
-  mu.grid <- project(mu.grid,  e, method = 'near')
+  mu.grid <- project(mu.grid, e, method = 'near')
   
   # init raster attribute table (RAT)
   mu.grid <- as.factor(mu.grid)
@@ -46,7 +54,7 @@ getSoilData <- function(s) {
   
   # tabular data
   # use unique combination of map unit keys from both sources
-  .mukeys <- as.integer(unique(c(mu.poly$mukey, levels(x)[[1]]$mukey)))
+  .mukeys <- as.integer(unique(c(mu.poly$mukey, levels(mu.grid)[[1]]$mukey)))
   
   ssurgo.mu <- SDA_query(sprintf("SELECT * FROM mapunit WHERE mukey IN %s", format_SQL_in_statement(.mukeys)))
   ssurgo.co <- SDA_query(sprintf("SELECT * FROM component WHERE mukey IN %s", format_SQL_in_statement(.mukeys)))
@@ -80,5 +88,6 @@ getSoilData <- function(s) {
 
 
 
-getSoilData('coweeta')
+getSoilData(s = 'coweeta')
+getSoilData(s = 'clay-center')
 
