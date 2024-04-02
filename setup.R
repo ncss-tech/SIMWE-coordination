@@ -10,8 +10,6 @@ stop()
 ## setup file system for sites
 makeFS <- function(site.path = 'sites', sites) {
   
-  unlink(site.path, recursive = TRUE)
-  
   v <- c('grid', 'vect', 'soil-data')
   
   for(i in sites) {
@@ -22,10 +20,15 @@ makeFS <- function(site.path = 'sites', sites) {
   
 }
 
-# starting suite of sites
-s <- c('SJER', 'SFREC', 'coweeta', 'clay-center')
+## start clean
+unlink('sites', recursive = TRUE)
+
+## starting suite of sites
+s <- c('SJER', 'SFREC', 'coweeta', 'clay-center', 'shawnee-hills')
 p <- 'sites'
-makeFS(site.path = p, sites = sites)
+makeFS(site.path = p, sites = s)
 
 
-# add new sites here 
+## add new sites here e.g.
+# makeFS(site.path = p, sites = 'XXX')
+
