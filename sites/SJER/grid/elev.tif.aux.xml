@@ -1,0 +1,13 @@
+<PAMDataset>
+  <PAMRasterBand band="1">
+    <Description>rtk_elev</Description>
+    <Metadata>
+      <MDI key="STATISTICS_APPROXIMATE">YES</MDI>
+      <MDI key="STATISTICS_MAXIMUM">371.0947265625</MDI>
+      <MDI key="STATISTICS_MEAN">349.68904496666</MDI>
+      <MDI key="STATISTICS_MINIMUM">333.43872070312</MDI>
+      <MDI key="STATISTICS_STDDEV">7.9664433967495</MDI>
+      <MDI key="STATISTICS_VALID_PERCENT">40.69</MDI>
+    </Metadata>
+  </PAMRasterBand>
+</PAMDataset>

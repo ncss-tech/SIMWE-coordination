@@ -91,3 +91,7 @@ getSoilData <- function(s) {
 getSoilData(s = 'coweeta')
 getSoilData(s = 'clay-center')
 
+getSoilData(s = 'sjer')
+getSoilData(s = 'sfrec')
+
+
