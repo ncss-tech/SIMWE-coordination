@@ -94,4 +94,5 @@ getSoilData(s = 'clay-center')
 getSoilData(s = 'sjer')
 getSoilData(s = 'sfrec')
 
+getSoilData(s = 'tx069-playas')
 
