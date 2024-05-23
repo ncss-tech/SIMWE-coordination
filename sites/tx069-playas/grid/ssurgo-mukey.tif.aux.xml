@@ -1,0 +1,145 @@
+<PAMDataset>
+  <PAMRasterBand band="1">
+    <Description>mukey</Description>
+    <GDALRasterAttributeTable tableType="thematic">
+      <FieldDefn index="0">
+        <Name>ID</Name>
+        <Type>0</Type>
+        <Usage>0</Usage>
+      </FieldDefn>
+      <FieldDefn index="1">
+        <Name>mukey</Name>
+        <Type>2</Type>
+        <Usage>0</Usage>
+      </FieldDefn>
+      <Row index="0">
+        <F>363754</F>
+        <F>363754</F>
+      </Row>
+      <Row index="1">
+        <F>363755</F>
+        <F>363755</F>
+      </Row>
+      <Row index="2">
+        <F>363756</F>
+        <F>363756</F>
+      </Row>
+      <Row index="3">
+        <F>363757</F>
+        <F>363757</F>
+      </Row>
+      <Row index="4">
+        <F>363761</F>
+        <F>363761</F>
+      </Row>
+      <Row index="5">
+        <F>363768</F>
+        <F>363768</F>
+      </Row>
+      <Row index="6">
+        <F>363769</F>
+        <F>363769</F>
+      </Row>
+      <Row index="7">
+        <F>363773</F>
+        <F>363773</F>
+      </Row>
+      <Row index="8">
+        <F>363774</F>
+        <F>363774</F>
+      </Row>
+      <Row index="9">
+        <F>363776</F>
+        <F>363776</F>
+      </Row>
+      <Row index="10">
+        <F>363777</F>
+        <F>363777</F>
+      </Row>
+      <Row index="11">
+        <F>363780</F>
+        <F>363780</F>
+      </Row>
+      <Row index="12">
+        <F>372338</F>
+        <F>372338</F>
+      </Row>
+      <Row index="13">
+        <F>372339</F>
+        <F>372339</F>
+      </Row>
+      <Row index="14">
+        <F>372340</F>
+        <F>372340</F>
+      </Row>
+      <Row index="15">
+        <F>372344</F>
+        <F>372344</F>
+      </Row>
+      <Row index="16">
+        <F>372345</F>
+        <F>372345</F>
+      </Row>
+      <Row index="17">
+        <F>2428277</F>
+        <F>2428277</F>
+      </Row>
+      <Row index="18">
+        <F>2428278</F>
+        <F>2428278</F>
+      </Row>
+      <Row index="19">
+        <F>2428279</F>
+        <F>2428279</F>
+      </Row>
+      <Row index="20">
+        <F>2428280</F>
+        <F>2428280</F>
+      </Row>
+      <Row index="21">
+        <F>2428281</F>
+        <F>2428281</F>
+      </Row>
+      <Row index="22">
+        <F>2428282</F>
+        <F>2428282</F>
+      </Row>
+      <Row index="23">
+        <F>2428284</F>
+        <F>2428284</F>
+      </Row>
+      <Row index="24">
+        <F>2428287</F>
+        <F>2428287</F>
+      </Row>
+      <Row index="25">
+        <F>2428291</F>
+        <F>2428291</F>
+      </Row>
+      <Row index="26">
+        <F>2428324</F>
+        <F>2428324</F>
+      </Row>
+      <Row index="27">
+        <F>2428325</F>
+        <F>2428325</F>
+      </Row>
+      <Row index="28">
+        <F>2428328</F>
+        <F>2428328</F>
+      </Row>
+      <Row index="29">
+        <F>2428330</F>
+        <F>2428330</F>
+      </Row>
+      <Row index="30">
+        <F>2428331</F>
+        <F>2428331</F>
+      </Row>
+      <Row index="31">
+        <F>2428334</F>
+        <F>2428334</F>
+      </Row>
+    </GDALRasterAttributeTable>
+  </PAMRasterBand>
+</PAMDataset>
