@@ -1,6 +1,8 @@
 library(terra)
 
+# each site should have an "elev.tif" in the site's local projected CRS
 f <- list.files(path = 'sites', pattern = 'elev.tif$', recursive = TRUE, full.names = TRUE)
+
 
 
 sink(file = 'site-CRS-info.txt')
