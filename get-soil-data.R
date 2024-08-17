@@ -7,7 +7,6 @@ library(aqp)
 # * surface properties related to runoff
 # * aggregation / subset to specific depth-interval
 # * possible re-sampling to common grid spacing
-# 
 
 
 #' @param s character, site name and path
@@ -80,6 +79,17 @@ getSoilData <- function(s) {
   
   # classify <2mm soil texture class
   ssurgo.hz$texture <- ssc_to_texcl(sand = ssurgo.hz$sandtotal_r, clay = ssurgo.hz$claytotal_r, simplify = TRUE) 
+  
+  # ROSETTA estimates
+  
+  ## develop ROSETTA estimates
+  # https://ncss-tech.github.io/AQP/soilDB/ROSETTA-API.html
+  .v <-c('sandtotal_r', 'silttotal_r', 'claytotal_r', 'dbthirdbar_r', 'wthirdbar_r', 'wfifteenbar_r')
+  .r <- horizons(ssurgo.hz)[, c('hzID', .v)]
+  R <- ROSETTA(.r, vars = .v, v = '3')
+  
+  # splice back into original horizon data
+  horizons(ssurgo.hz) <- R[, c('hzID', 'theta_r', 'theta_s', 'alpha', 'npar', 'ksat')]
   
   # save
   saveRDS(ssurgo.hz, file = file.path(.p, 'soil-data', 'ssurgo-SPC.rds'))
