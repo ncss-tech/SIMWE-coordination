@@ -20,15 +20,20 @@ makeFS <- function(site.path = 'sites', sites) {
   
 }
 
+
+## base path
+p <- 'sites'
+
 ## start clean
 # unlink('sites', recursive = TRUE)
 
 ## starting suite of sites
-s <- c('SJER', 'SFREC', 'coweeta', 'clay-center', 'shawnee-hills', 'tx069-playas')
-p <- 'sites'
-makeFS(site.path = p, sites = s)
+# s <- c('SJER', 'SFREC', 'coweeta', 'clay-center', 'shawnee-hills', 'tx069-playas')
+# makeFS(site.path = p, sites = s)
 
 
 ## add new sites here e.g.
-# makeFS(site.path = p, sites = 'XXX')
+# makeFS(site.path = p, sites = 'sonora')
+
+
 

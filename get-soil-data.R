@@ -4,6 +4,7 @@ library(aqp)
 
 ## TODO:
 # * hydraulic properties via ROSETTA
+
 # * surface properties related to runoff
 # * aggregation / subset to specific depth-interval
 # * possible re-sampling to common grid spacing
@@ -84,7 +85,7 @@ getSoilData <- function(s) {
   
   ## develop ROSETTA estimates
   # https://ncss-tech.github.io/AQP/soilDB/ROSETTA-API.html
-  .v <-c('sandtotal_r', 'silttotal_r', 'claytotal_r', 'dbthirdbar_r', 'wthirdbar_r', 'wfifteenbar_r')
+  .v <- c('sandtotal_r', 'silttotal_r', 'claytotal_r', 'dbthirdbar_r', 'wthirdbar_r', 'wfifteenbar_r')
   .r <- horizons(ssurgo.hz)[, c('hzID', .v)]
   R <- ROSETTA(.r, vars = .v, v = '3')
   
